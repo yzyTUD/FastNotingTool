@@ -1,0 +1,13 @@
+	Image segmentation technique is used to partition an image into meaningful parts having similar features and properties
+	simplification i.e. representing an image into meaningful and easily analyzable way.
+	divide an image into several parts/segments having similar features or attributes.
+	The basic applications of image segmentation are: Content-based image retrieval, Medical imaging, Object detection and Recognition Tasks, Automatic traffic control systems and Video surveillance
+	º‡ ”
+	Discontinuity detection based approach
+	Similarity detection based approach
+	category in which edges formed due to intensity discontinuity are detected and linked to form boundaries of regions 
+	 thresholding techniques
+	 region growing techniques and region splitting and merging
+	 These all divide the image into regions having similar set of pixels.
+	 The clustering techniques also use this methodology
+	Multiple Thresholding
