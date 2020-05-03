@@ -354,3 +354,30 @@ https://www.bilibili.com/read/cv614000/
 	IK��Inverse Kinametics����д,�Ƿ����˶�ѧ����˼��������ֲ�ṹ��,�ؽں͹���ʵ�ʹ������˶���,�����ؽڡ���ؽڡ���ؽڼ����ӹ�������һ���˶���
 	https://arxiv.org/pdf/1909.09318.pdf
 	git@github.com:yzyTUD/FastNotingTool.git
+	Using Textures in OpenGL
+	glGenTextures
+	glActiveTexture
+	glBindTexture
+	glTexImage2D
+	Upload pixel data.
+	GL_RGB
+	Internal Format
+	Provided data format
+	glTexParameteri
+	Specify parameters
+	Textures can be sampled from, e.g. in a fragment shader.
+	uniform sampler2D albedoTexture; 
+	texture(diffuseTexture, texCoord) //returns a color
+	Sample a location
+	texCoord
+	glUniform1i(diffuseTextureLocation, 0); 
+	glActiveTexture(GL_TEXTURE0); 
+	Active
+	Texture Sampling Filters
+	Texture Sampling Filters
+	Texture coordinates usually do not coincide with texel locations:
+	Magnification filter if fragment is smaller than a texel
+	Magnification filter
+	Minification filter if fragment is larger than a texel
+	Magnification Filter
+	Possible Options
