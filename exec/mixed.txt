@@ -353,3 +353,4 @@ https://www.bilibili.com/read/cv614000/
 	������Ӱ
 	IK��Inverse Kinametics����д,�Ƿ����˶�ѧ����˼��������ֲ�ṹ��,�ؽں͹���ʵ�ʹ������˶���,�����ؽڡ���ؽڡ���ؽڼ����ӹ�������һ���˶���
 	https://arxiv.org/pdf/1909.09318.pdf
+	git@github.com:yzyTUD/FastNotingTool.git
