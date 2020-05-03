@@ -1,5 +1,8 @@
 
-
+    done
+        fast copy-paste under windows os. 
+        show current time when pasting.
+        beep for successful record.
 
     todo
         insearting mode and switching: copy-paste mode or question insearting mode. use a spec. key val. to control
