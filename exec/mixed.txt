@@ -1,0 +1,383 @@
+	
+	Geometry
+	Instanced Rendering
+	Tesselation Examples
+	OBJ Rendering
+
+	Indexed Rendering
+	A polygon mesh ?? is defined as a triple ??, ??, ?? with the 3 sets
+	Oftentimes, E can be derived from F and sometimes vice versa .
+	ordered in a consistent winding order.
+	right-hand rule:
+
+	winding order is used for backface culling
+	OBJ file format is line based 
+	vertex positions (v)
+	normals (vn)
+	f 1//1 3//1 7//1 5//1
+	separated by slash symbols) per corner
+	First index is 1 and not 0!
+	Polygon Meshes � Data Structure
+	store the OBJ content in array containers
+
+	Polygon Meshes � Data Structure
+	geometry is stored in vertex arrays
+	vertex attributes (position, texcoords,�)
+	and textures storing (colors, displacements, �)
+	 interleaved or non interleaved order
+	Vertex Buffer with Interleaved storage:
+	Stream processing unit
+	in the first part of the rendering pipeline
+	OpenGL Vertex
+	OpenGL Primitives
+	primitve assembly
+	point, line, and triangle (1, 2, and 3 vertices)
+	basic rendering primitives 
+	glDrawArrays(GL_TRIANGLES, startIdx, count);
+	strips
+	To compute derivatives and other quantities depending on neighbors
+	adjacency
+	array based rendering
+	Indexed rendering
+	Vertex Buffer:
+	Index Buffer
+	glDrawElements
+	For indexed rendering use the glDrawElements function
+	Indexed Rendering allows to define primitives based on a different order than the one of the vertex buffers.
+
+	Index Buffer
+	order
+	generate several strips in one index buffer, one can define a restart index that marks the end of a strip
+	restart index
+	In closed triangle meshes each vertex appears in 6 triangles
+	in case of a stripification in 2 strips
+	indexed rendering saves memory and vertex shader executions
+	vertex shader executions
+	Indirection induces performance penalty due to additional memory access and reduced cache coherency
+	reduced cache coherency.
+	TESSELATION EXAMPLES
+	Tgl Strip Tesselation of Height Fields
+	Height Field Tesselation
+	Parametric Surfaces
+	Tesselation
+	SphereTesselation
+	define std::vector to collect all vertices
+	glBindBuffer
+	glBufferData
+	glEnableVertexAttribArray
+	glVertexAttribPointer
+	unbind the vertex array object for now
+	normals and texcrds are indexed separately
+	 OBJ files
+	the extraction of vertex data from a polygonal mesh
+	OBJ to Renderable Vertex Buffers
+	extraction of vertex buffer from simple polymesh
+	For every corner triplet, check if we already assigned a vertex index to it:
+	 append vertex index to index buffer
+	create vertex, assign new index
+	index buffer (oneelement per corner)
+	indexed rendering for obj files 
+	Geometry Shader
+	invokation: once per primitive 
+	input: points (1), lines (2), triangles (3), lines_adjacency (4), triangles_adjacency (6)
+	points, line_strips, triangle_strip
+	strips
+	Low vertex count primitives
+	the maximum number of output vertices per geometry shader invokation is limited
+	Tesselation of complete sphere typically not possible
+	Good applications
+	Platonic solids
+	Billboards
+	Lines illustrating normals
+	Geometry Shader
+	Spheres show up only partially
+	geometry shader inputs are arrays even for input type points. 
+	predeclared inputs are gl_PositionIn[], gl_PointSizeIn[]
+	 the same name has to be used for the array in the geometry shader
+	in vec3 normal[];
+	out vec3 normal;
+	EmitVertex();
+	stream vertex out
+
+	 a geometry shader for bezier curves
+	layout
+	Geometry Shaders � Bezier Curve
+	29
+	Geometry Shader � Show Normals
+	out: GL_LINE_STRIP
+	// line is done (begin new one)
+	EndPrimitive();
+	SCENE GRAPHS AND INSTANCED RENDERING
+	Scene Organization
+	a collection of virtual objects and their parameters is called a scene
+
+	Properties (material, �)
+	Lights (illuminate, shadow)
+	Animations
+	fast traversal of elements
+	Scene Graph Example
+	35
+	glDrawElementsInstanced
+	Each draw call requires communication between CPU and GPU and is therefore a potential bottleneck
+	 potential bottleneck
+	making the matrix an instance attribute
+	vertex shader has access to gl_InstanceID.
+	Instanced Rendering - Sphere
+	instances of one vertex per sphere
+	circumvents Geometry Shader limitations
+	geometry shader generates one quad
+	inputs become arrays!
+	Polygon meshes are among the most important representations
+	OBJ is a simple to read file format that can store polygon meshes
+	mapped directly to a simple in-core data structure.
+
+	Geometry shader can be used to generate a small amount of geometry
+	38
+	Light Transport
+
+	Light Perception
+	Lighting in Shader
+
+	irradiance
+	intensity
+	radiance
+	Emission
+	Transport
+	Scattering
+	 in transparent media like gases light is deflected at particles of the medium
+	Reflection
+	reflected at surfaces
+	Refraction
+	 light passes through transparent surfaces like glas
+	Absorption
+	at surfaces light is absorpt
+
+	Detection
+	eyes and image sensors measure spatial light distributions
+
+	Spectrum
+	The intensity of emitted light varies with direction of emission
+
+	IES file format allows specification of spatially varying light intensity
+	http://photometricviewer.com/
+	view photometric curve
+	realtime renderer
+	Autodesk 3ds Max integration
+	color bleeding
+	Illuminated surfaces act as light sources of indirect light 
+	 resulting in Color Bleeding
+	Scene brightness can significantly increase with the number of interreflections
+	Mirror reflection arises at smooth surfaces especially at near tangential viewing directions
+	example of mirror reflections and soft shadows 
+	diffuse surface scattering
+	Refraction
+	changes light direction 
+	Curved surfaces bundle light and can generate caustics
+	Volumetric scattering
+	illustrate fog, smoke and generates effects like subsurface scattering and crepuscular rays
+	crepuscular rays
+
+	Ambient occlusion
+	a technique to estimate shadowing without a specific light source
+	the whole space is assumed to be filled with light emitting gas
+	 light emitting gas
+	Point light
+	 lead to hard shadows
+	Area light sources
+	 soft shadows
+	The human eye has four different light receptors
+	receptors
+	Lumen (lm). 
+	Perceived light power
+	RGB and XYZ color space
+	normalized color spaces have been introduced
+	for different display 
+	normalized
+	CIE XYZ reference space
+	The sRGB color space refines the non linear relationship between physical RGB channels ?????????????? and the sensation adapted ones ?????????
+	non linear relationship 
+	better image quality
+	Most displays perform a gamma correction with ?? = 2.2
+	Reflected Light
+	integrate
+	Reflection Probability 
+	Incoming Light 
+	integrate Reflection Probability times Incoming Light over incoming directions
+	Reflected Light = integrate Reflection Probability times Incoming Light over incoming directions
+	Incoming Light = Outgoing Light of first hit when tracing in incoming direction
+	Rendering Equation
+	integrate pairwise geometry terms over patches
+	Bidirectional Path-Tracing
+	sample camera path
+	sample light path
+	interconnect paths
+	http://madebyevan.com/webgl-path-tracing/
+	The entire scene is dynamically compiled into a GLSL shader.
+	To calculate a pixel color, a ray is shot into the scene and allowed to bounce around five times
+	LOCAL ILLUMINATION
+	Common simplifications
+	ignore indirect lighting
+	restrict light source types
+	avoid solving integrals in the rendering equation,
+	restrict mirror reflection to planar surfaces
+	calculate hard shadows or approximate soft shadows in another rendering pass
+	use efficient-to-evaluate materials
+	Spot Light
+	Local Illumination Models
+	diffuse lighting
+	specular lighting
+	opening angle used to compute ambient occlusion factor
+	ambient lighting (once)
+	Lambertian Radiation
+	portional to cosine of ??
+
+	outgoing radiance
+	The sun is no Lambertian Radiator
+	Oren-Nayar � surface is composed of diffuse microfacets with stochastically distributed orientiations
+	Oren-Nayar
+	Lambertian �simplest model that is computed from cosine of angle between surface normal and incoming light direction
+
+	Diffuse Reflection
+
+	Constant BRDF yields local lighting model that depends on direction to light source but not on observer
+	Lighting Calculations
+	Constant BRDF
+	surface reflects the same in all directions
+	Albedo is the amount of reflected light over the amount of incoming light in dependence of wavelength typically represented as sRGB value
+	For Lambertian albedo describes the reflection properties completely
+	describes the reflection properties
+	Specular Reflection
+	Phong � oldest empirical models adds shininess 
+	Blinn-Phong � based on mirror reflecting microfacets
+	Cook Torrance � incorporates self-shadowing into microfacet model (see CG3)
+	Diffuse lighting type
+	Influence of shininess
+	Specular lighting type
+	Phong Blinn-Phong Cook-Torrance
+
+	SHADER
+	Which Coordinate System To Use?
+	Preserves angles
+	Preserves distances
+	light attenuation
+	All quantities must be transformed into the coordinate system
+	Different quantities are usually given in different coordinate systems:
+	Normals must be transformed with the inverse transpose of the transformation matrix.
+	Too steep attenuation
+	Eye Coord
+	Fragment shader: Receive interpolated quantities.
+	Use uniforms to calculate missing quantities.
+
+	Calculate lighting
+	Interpolated normal has non-unit length.
+	39
+	do the transformation at the end of every fragment shader
+	use sRGB framebuffers with glEnable(GL_FRAMEBUFFER_SRGB);
+	sRGB
+	Pay attention to your input colors. Some of them might already be gamma-corrected (e.g. textures ? transform with ??h???????????? = ?????????????????? ?
+	If you have multiple render passes, gamma correction is only needed in the last one.
+	Object Coordinates
+	World Coordinates
+	Eye Coordinates
+	Which Coordinate System To Use?
+	How can shader codes be designed where different algorithms for different parts can be combined?
+	Write modules for different algorithms and link them in the final program to a composed shader
+	Attach Shader to Program
+	can be choosen flexible with gui 
+	hader function are used 
+	one shader object is needed that contains the main function and declares operations
+	Conceptionally
+	�and other variables/instructions� here
+	allows to reuse compiled codes and dynamically create shader programs that suit the current needs
+	Realtime CG approximates realistic lighting
+	Lighting calculations should be done in an anglepreserving coordinate system
+	anglepreserving coordinate system.
+
+	Work for lighting calculation is shared among CPU, vertex shader, and fragment shader.
+	Work for lighting calculation
+	Local illumination models are composed of ambient, diffuse (Lambertian / Oren-Nayar), and specular (Phong, Blinn-Phong, Cook-Torrance) components.
+	Local illumination models
+	Texturing
+	adding details from a 2D image to a mesh.
+	Every surface point addresses a point in the texture
+	Every surface point
+	Texture coordinates are defined as vertex attributes
+	 interpolated into triangles
+	in DirectX
+	The ??-axis in DirectX points in the opposite direction
+	Solution: Flip image or texture coordinates.
+
+
+    ---
+	https://zhuanlan.zhihu.com/p/101218649
+	����ģ����
+	Job Simulator �� Rick and Morty ����ͬһ����˾����Ʒ�������Ǹù�˾��Google�չ�������������Ϸ�������˽ϸߵ����������ɼ�ģ����Ϸ��Ǳ������
+	http://blog.sina.com.cn/s/blog_5fb40ceb0102wbhk.html
+	http://s16.sinaimg.cn/bmiddle/001KF55Fzy75vOgvniLef&690
+	https://www.zhihu.com/question/28452098
+	��ʹ��FIFA�����Ĵ�����Ȼ�������Ա��͸����bug��
+	��Ϥͼ��ѧ/����ѧ��������㷨�������㷨ʵ�־���
+	�����뷢 xiang.huang@galasports.net
+	MMO < FPS < RTS < ������������Ϊʵ��ʵ�ʿ�����AI���ˣ�����ҿ���һ�£�ʲô����Ӳ��AI��
+	����������ʵ��һ���ڶ���������һ��������������Ϊ��ֻҪѵ�����������ܽ��һ������������뷨
+	Ӳ����ϷAI������״̬������Ϊ����״̬���ǻ���������Ϊ����ѡ������AIû��Ϊ���ⶫ������Ҷ���hard code�ģ�
+	https://i0.hdslb.com/bfs/article/02a7ef41642080aabd15dd98b628433b28682eee.jpg@1200w_674h.webp
+	��ѧ���治����
+���ߣ�VR����
+https://www.bilibili.com/read/cv614000/
+������ bilibili
+	��Զ�� VR����һ���������ģ����ë����Ϸ����ͬ�ڳ����ģ������VR��Ϸ������ʵģ������ë�������ͬʱ���������˼���Ȥ��С��Ϸ
+	http://faculty.cs.tamu.edu/sueda/projects/redmax/
+	http://www.gamfe.com/zhuanye/kecheng/youxidonghuasheji.html
+	����и�����Դ�Ǵ�ͳCG������˾��VR,������Ա��������֮��������õģ����ǽ������澭�鲻��
+	VR���������������������ͷԽ��
+	��ĳЩ��Ϸ�У��������¿����ƶ��ֱ�ʱ����ῴ����Щ�������壬��������һ����Ϊ�����˶�ѧ������� IK���Ķ������������Ƶ�
+	IK body��VR��Ϸ�����˳��ʵ�ֵĻ���Ԫ��
+	IK�������ӳ�����
+	��������ʵ��ս���У�ֻҪ����ֱ���Ⱦ������������ʵ��ս���ͻ��ʵ�ʵ�ս�����Ӽ���
+	������������ʵ�п�����������Ϊ��������ʵ��һ���ִ��ڵ�ʱ����� ��������ͻ᲻��г
+	������һ��IK��������ȭ��ģ�����ж���Ҫ�����������Ĵ�һ���̼�
+	���÷�����ѧ����Ч����ȽϺ�
+	https://www.bilibili.com/video/av47002986/
+	grk29t
+	�����ض����Hand IK Retargeting
+	IKinema��˾ר���ṩ�ùǼܽṹ��������ʵ�˶���ϵͳ
+	https://toutiao.io/posts/xhh713/preview
+	��������ϷҲ�в���֮��������ģʽ̫����ª������ֻ���ĸ���ͬ��ѡ�ֽ�ɫ���ж�ս��û���κε����½���
+	�ĸ�С��Ϸ������ģʽҲ����������Ϸ�Ŀ����Զ��ӳ�һ�㣬��������������С��Ϸ�󣬱��ʧȥ���ʸ�
+	https://zhuanlan.zhihu.com/p/27026296
+	https://zhuanlan.zhihu.com/p/22226094
+	��Ϊ��ѹ��������Ϸ��ֻ�����ǻ���ʽ�����ͼ��
+	ƫ���ڽ����� VR ��Ϸ
+	���ǵ��Ŷӹ�ģ��Ԥ�㣬�ڸ߱����ǰ���£���ȥ������Ϸ�淨����������˵ʵ��̫���ˡ�
+	������Ӱ
+	IK��Inverse Kinametics����д,�Ƿ����˶�ѧ����˼��������ֲ�ṹ��,�ؽں͹���ʵ�ʹ������˶���,�����ؽڡ���ؽڡ���ؽڼ����ӹ�������һ���˶���
+	https://arxiv.org/pdf/1909.09318.pdf
+	git@github.com:yzyTUD/FastNotingTool.git
+	Using Textures in OpenGL
+	glGenTextures
+	glActiveTexture
+	glBindTexture
+	glTexImage2D
+	Upload pixel data.
+	GL_RGB
+	Internal Format
+	Provided data format
+	glTexParameteri
+	Specify parameters
+	Textures can be sampled from, e.g. in a fragment shader.
+	uniform sampler2D albedoTexture; 
+	texture(diffuseTexture, texCoord) //returns a color
+	Sample a location
+	texCoord
+	glUniform1i(diffuseTextureLocation, 0); 
+	glActiveTexture(GL_TEXTURE0); 
+	Active
+	Texture Sampling Filters
+	Texture Sampling Filters
+	Texture coordinates usually do not coincide with texel locations:
+	Magnification filter if fragment is smaller than a texel
+	Magnification filter
+	Minification filter if fragment is larger than a texel
+	Magnification Filter
+	Possible Options
