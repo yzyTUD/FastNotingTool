@@ -75,12 +75,26 @@ std::string currentDateTime() {
 	int Sec = timeinfo->tm_sec;
 
 	return to_string(1900 + Year) + "." + to_string(1 + Month) + "." + to_string(Day) + ":"
-		+ to_string(Hour) + "h" + 
-		to_string(Min) + "m" + 
+		+ to_string(Hour) + "h" +
+		to_string(Min) + "m" +
 		to_string(Sec) + "s";
 }
 
+std::string get_current_date_time_for_filename() {
+	time_t rawtime;
+	struct tm* timeinfo;
 
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	int Year = timeinfo->tm_year;
+	int Month = timeinfo->tm_mon;
+	int Day = timeinfo->tm_mday;
+	int Hour = timeinfo->tm_hour;
+	int Min = timeinfo->tm_min;
+	int Sec = timeinfo->tm_sec;
+
+	return to_string(1900 + Year) + "-" + to_string(1 + Month) + "-" + to_string(Day);
+}
 
 string GetClipboardText()
 {
@@ -113,7 +127,7 @@ int main(int argc, char** argv)
 	ofstream report;
 	report.open(std::string(argv[1]), std::ofstream::out | std::ofstream::app);
 	ofstream logger;
-	logger.open(std::string("log.txt"), std::ofstream::out | std::ofstream::app);
+	logger.open(std::string("log_" + get_current_date_time_for_filename() + ".txt"), std::ofstream::out | std::ofstream::app);
 	string laststr = GetClipboardText();
 	ReplaceStringInPlace(laststr, "\r\n", " ");
 	std::cout << currentDateTime() << std::endl;
