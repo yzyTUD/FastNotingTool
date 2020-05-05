@@ -190,6 +190,11 @@
 				cout << "continue:\n";
 				// do some operations
 			}
+			if ((get_current_date_time_as_minutes() - startmin) == 30) {
+				Beep(400, 1000);
+				Sleep(300);
+				Beep(400, 1000);
+			}
 		}
 
 
