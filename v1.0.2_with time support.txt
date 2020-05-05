@@ -151,6 +151,7 @@
 		string curstr;
 		int startmin = get_current_date_time_as_minutes();
 		int mode = 0;
+		int number_of_half_hour = 0;
 		while (1) {
 			if (!GetClipboardText().empty())
 			{
@@ -186,7 +187,7 @@
 				if (cmd._Equal("xq"))
 					return 0;
 				if (cmd._Equal("xt"))
-					cout << "have been working for: (min)" << get_current_date_time_as_minutes() - startmin << endl;
+					cout << "have been working for: (in min)" << 30 * number_of_half_hour + get_current_date_time_as_minutes() - startmin << endl;
 				cout << "continue:\n";
 				// do some operations
 			}
@@ -194,6 +195,8 @@
 				Beep(400, 1000);
 				Sleep(300);
 				Beep(400, 1000);
+				number_of_half_hour++;
+				startmin = get_current_date_time_as_minutes();
 			}
 		}
 
