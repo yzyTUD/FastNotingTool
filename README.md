@@ -1,7 +1,5 @@
 
-current screenshots:
-![sc](https://github.com/yzyTUD/FastNotingTool/blob/master/_v1.0.5_multiple%20exec.png)
-    
+
     done
         fast copy-paste under windows os. 
         show current time when pasting.
@@ -14,3 +12,6 @@ current screenshots:
         timing, beep when working for too lang time. --> a prob. is how to detect working.
         making the software more stable and robust.
         
+current screenshots:
+![sc](https://github.com/yzyTUD/FastNotingTool/blob/master/_v1.0.5_multiple%20exec.png)
+    
