@@ -7,9 +7,9 @@
         an AutoHotkey script for retargeting ctrl-c to f1. which simplifies the work.
         insearting mode and switching: copy-paste mode or question insearting mode. use a spec. key val. to control
             multiple pre-defined modes: q- or h- or p- ... can be used 
-    todo
+        timing, beep when working for too lang time. --> a prob. is how to detect working state.
         logging, data analysis, record time used for learning. vis on web.
-        timing, beep when working for too lang time. --> a prob. is how to detect working.
+    todo
         making the software more stable and robust.
         
 current screenshots:
