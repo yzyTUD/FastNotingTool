@@ -1,5 +1,6 @@
 
 ![sc](https://github.com/yzyTUD/FastNotingTool/blob/master/_v1.0.5_multiple%20exec.png)
+    
     done
         fast copy-paste under windows os. 
         show current time when pasting.
