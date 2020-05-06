@@ -1,5 +1,5 @@
 
-
+current screenshots:
 ![sc](https://github.com/yzyTUD/FastNotingTool/blob/master/_v1.0.5_multiple%20exec.png)
     
     done
