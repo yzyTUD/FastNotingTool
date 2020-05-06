@@ -11,7 +11,7 @@
         logging, data analysis, record time used for learning. vis on web.
     todo
         making the software more stable and robust.
-        
-current screenshots:
+    last modi.: 6/5/2020
+    current screenshots:
 ![sc](https://github.com/yzyTUD/FastNotingTool/blob/master/_v1.0.5_multiple%20exec.png)
     
