@@ -19,5 +19,5 @@
   border: none;
   background: none;
 }
-![](https://github.com/yzyTUD/FastNotingTool/blob/master/logging%20support.png)
+![](https://github.com/yzyTUD/FastNotingTool/blob/master/logging.png)
     
