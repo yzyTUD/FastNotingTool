@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 copy_now := 0
 
-LAlt::
+f1::
 Copy_now := !Copy_now
 If (Copy_now)
     Send ^c
@@ -20,6 +20,7 @@ Return
 ::wi::what is 
 ::hc::how can we 
 ::wk::what kind of 
+::ef::explain the following
 
 ::qcpt::what is? how is used? the idea? adv. and disadv.? 
 ::tcalcu::write formulas and calculate this example! 
