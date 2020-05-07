@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 copy_now := 0
 
-F1::
+LAlt::
 Copy_now := !Copy_now
 If (Copy_now)
     Send ^c
@@ -16,4 +16,15 @@ Return
 
 
 ::mail::yzhongyuanfff@gmail.com
-::for::for(int i=0;i<n;i++)
+
+::wi::what is 
+::hc::how can we 
+::wk::what kind of 
+
+::qcpt::what is? how is used? the idea? adv. and disadv.? 
+::tcalcu::write formulas and calculate this example! 
+::tall::imp. and paper and further reading!  
+::qalgo::pseudo code? proof? complexity? adv. disadv.? imp. &t 
+::qpf::proof this!
+
+
