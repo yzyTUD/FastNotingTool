@@ -14,6 +14,6 @@
     last modi.: 6/5/2020
     usage: tobeadded
     current screenshots:
-![](https://github.com/yzyTUD/FastNotingTool/blob/master/_v1.0.5_multiple%20exec.png)
-![](https://github.com/yzyTUD/FastNotingTool/blob/master/logging.png)
+![](pics/v1.0.5_multiple%20exec.png)
+![](pics/logging.png)
     
