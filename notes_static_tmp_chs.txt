@@ -1,0 +1,5 @@
+	同步定位与地图构建了解
+	业界公认视觉领域空间定位技术的前沿方向
+	未知环境
+	SLAM通常要被剪裁至适应可获得的资源，于是可以看出它的目标不是完美，
+	2D-Slam算法HectorSLAM ，Gmapping， KartoSLAM， CoreSLAM， LagoSLAM
