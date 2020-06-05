@@ -1,0 +1,124 @@
+
+	
+	
+	
+		soot particles
+	composed of soot particles suspended in air
+	concentration
+	 track concentration of soot on the  grid: ??(??,??)
+	Evolution equation:
+	&q equ. for soot concentration on grid 
+	Usually smoke is moving because the air is hot
+	 pressure vs. gravity ends up in buoyancy  (hot air rising)
+	Need to track temperature
+	&q why and how can we track temprature?? 
+	&h Need to track temperature
+	conduction
+	&q op73
+	The Boussinesq approximation is applied to problems where the fluid varies in temperature from one place to another, driving a flow of fluid and heat transfer.
+	The fluid satisfies conservation of mass, conservation of momentum and conservation of energy.
+	Boussinesq approximation
+	ariations in fluid properties other than density ρ are ignored
+	In the Boussinesq approximation, variations in fluid properties other than density ρ are ignored
+	continuity equation for conservation of mass i
+	general expression for conservation of momentum of an incompressible, Newtonian fluid (the Navier–Stokes equations) is
+	where α is the coefficient of thermal expansion
+	conservation of momentum
+	conservation of mass
+	convection equations
+	Density variation due to temperature or soot concentration  is very small
+	Use the “Boussinesq approximation”:  fix density=constant
+	 but add external buoyancy force in  momentum equation:
+	“Boussinesq approximation
+	Constants ?? and ?? can be tuned 
+	If no soot and no temperature difference
+	&q how can we simnulate tempre=ature diff,?? op74
+	&h bouy. force is a vector force! 
+	If open air extends beyond the grid, what boundary  condition? 
+	&q 
+	free surface (?? = 0)
+	May want to explicitly zero velocity on far boundaries
+	We let air blow in or out as it wants 
+	&q x2 
+	Vorticity Confinement
+	vortices live on all scales and have high visual impact 
+	numerical dissipation disolves vortices too fast
+	[Fedkiw 2001] add force that keeps vortices alive 
+	&q how can we preserve the vortices?? x2 
+	couple  them with forces to grid simulation
+	trace vortex marker particles
+	Fedkiw
+	vortex strength and axis of rotation
+	&q how can we determain vortex strength and axis of rotation?? op77
+	gradient vorticity
+	points  towards vortex core line
+	vorticity confinement force
+	&q what is the equ. of vorticity confinement force?? op77
+	&q why we need deltax here? 
+	ensures independence of  grid resolution
+	independence
+	&q mark omega, ita and force dir in this pic.!op77
+	numerical dissipation of soot density and temperature  counteracts the gains of vorticity confinement
+	counteracts
+	vorticity confinement 
+	&q how can we vorticity confinement
+	&q ??
+	overshooting
+	higher order interpolation over the grid fights back  numerical dissipation but has the problem of overshooting
+	? higher order interpolation
+	monotonic Hermite  Interpolation
+	monotone cubic interpolation is a variant of cubic interpolation that preserves monotonicity of the data set being interpolated.
+	preserves monotonicity of the data set being interpolated.
+	Monotonicity is preserved by linear interpolation but not guaranteed by cubic interpolation.
+	ensure the monotonicity of the resulting Hermite spline.
+	Hermite interpolation
+	&t
+	&t use c++ and python mixed 
+	modified Hermite  interpolation that is monotonic in the data.
+	numerical dissipation
+	&q how can we deal with numerical dissipation? with interpolation 
+	&q but can not use higher order interpolaiton! beacase of overshooting
+	&h op80
+	&h water and sph approach left 
+	voxelization approach does not sufficiently reproduce  water surfaces
+	 voxelization approach
+	define cell state to be fluid if it contains marker particles, empty or  solid otherwise 
+	sample
+	resample  resulting iso-surface on simulation
+	Marker particles
+	&q the idea of Marker particles! op80 compared to voxelization methods 
+	surfaces
+	recompute distant values ?? ?? > 0 by fast marching method
+	? Level Sets 
+	&q idea of levelset method 
+	&q op80 
+	&p pp
+	&t papers!!!
+	Felzenszwalb, P., & Huttenlocher, D. (2004). Distance  transforms of sampled functions. Cornell University.
+	Fast Distance Function
+	&q what is Fast Distance Function, hwo can it be used to levelset methods?? op81
+	&q 3 ways to define a surface when simnulating 
+	nD-case can be reduced to (n-1)D-case
+	3D transform can also be computed in linear time
+	Felzenszwalb, P., &  Huttenlocher, D. (2004).  Distance transforms of  sampled functions. Cornell  University
+	&t paper!!!!!
+	height of lower envelop over  all parabolae
+	Then 1D distance transform is  height of lower envelop over  all parabolae
+	compute lower envelop of  parabolae
+	 list of  ?? parabola parts
+	lower envelop over  all parabolae 
+	&q how lower envelop over
+	&all parabolae
+	&q can be represented ?? modelled? computed?? 
+	Evelop is built
+	&q how Evelop can be built
+	? Evelop is built in sweep from  left to right, adding one  parabola at a time
+	horizontal range  of parabola part  ?
+	signed distance simplifies extrapolation significantly
+	store for each grid point closest point on interface
+	solve the PDE with finite differences (Careful “upwind”  scheme needed 
+	Extrapolation
+	&q Extrapolation methods for surface computation?? x2 
+	Fast Distance Function
+	&q the algo. to compute Fast Distance Function??! op84
+	&h the algo is grid based so, we use q from 0 to n-1 to iterate all grid cells! 
