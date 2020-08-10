@@ -1,22 +1,9 @@
-
+	
+  	Implicit or semi-implicit methods are generally used to 
+	  	integrate the ordinary differential equations,
+	Applying a Newton or Picard iteration produces a system of 
+		linear equations which is nonsymmetric in the 
+		presence of advection and indefinite in the presence of incompressibility
+	
 		
-		本人研究方向是NLP，面的是AILab语音部门
-	面试官应该是未来同事，上来在白板上先描述了第一道题
-	开始虐了）先写道题吧。用Tensorflow写一个KNN算法
-	（面试官看我被虐的有点惨，笑着说换道题吧）用C++写个简单的矩阵乘法吧
-	两个上三角矩阵相乘如何优化？（完全懵逼，答不出来）
-	职业规划
-	HR交叉面
-	刷题还是很必须的。要做到快速出题，实在不会的题也得写个次优解，千万不要挂机。
-	leetcode958 判断是否是完全二叉树。之前刷面经看到了，非常感谢大家分享面经
-	一道算法题，大概就是简单的dp
-	一道算法提，就是数组中求最大的k个值
-	
-
-	
-	
-	
-	
-
-	
 	
