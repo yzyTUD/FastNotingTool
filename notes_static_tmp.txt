@@ -1,10 +1,69 @@
 	
-  	Implicit or semi-implicit methods are generally used to 
-	  	integrate the ordinary differential equations,
-	Applying a Newton or Picard iteration produces a system of 
-		linear equations which is nonsymmetric in the 
-		presence of advection and indefinite in the presence of incompressibility
+	
+	
+	
+	
+	              	
+	
+	
+	
 	
 		
 	
 	
+	
+		https://www-sop.inria.fr/reves/Basilic/2015/PRDD15b/PCBPT.pdf
+	
+	
+	ICP is however well-known to  suffer from local minima.
+	combines it with a branch-and-bound (BnB)  scheme
+	outlier robustness
+	The concept of ICP is simple and intuitive. It alternates between estimating geometric transformation (rotation and translation), and estimating the point-wise correspondences
+	widely used in computer vision, and beyond computer vision
+	ICP is however also well-known for its suffering from  the issue of local minima
+	Despite that this  drawback of local-minima is generally well-known, 
+		relatively few papers have tackled this issue explicitly
+	
+	
+		      individual appointments for evaluation      BigBlueButton online conferencing      screen sharing
+	use the scalable cloud services
+	you need a valid ZIH login
+	GoToMeeting and Zoom licenses are issued to personal logins only
+	BigBlueButton can be used by all employees of the TU Dresden without further ado.
+	Each of these tools has similar functionalities. 
+	Go-ICP can be applied in scenarios where an optimal solution is desirable or where a good initialization is not always available.
+	
+	
+	
+	
+	CCD（Cyclic Coordinate Descent）是最简单和最流行的反向运动学方法之一，已广泛应用于计算机游戏行业
+	主要思想是一次将一个关节与末端效应器和目标对齐
+	CCD倾向于过分强调靠近目标位置的骨骼的旋转（非常长的CCD链只会在其目标周围滚动）
+	很难扩展到多个末端执行器的问题（在这种情况下使用FABRIK）。完全地扩展链条也需要大量的迭代。
+	没有IK算法是完美的
+	The reason CCD is so popular is that it is a computationally fast
+	computationally fast, algorithmically simple, and  straight-forward technique
+	can run at interactive  frame rates.
+	10.1080/2165347X.2013.823362
+	only on a single-linked chained IK problem and disregard multiple connected  hierarchical goals
+	can be fine-tuned to produce more natural lifelike character poses that can be used  to generate realistic motions
+	not requiring any complex matrix math  decomposition
+	A basic rudimentary implementation of CCD often requires numerous additional engineering adjustments to make it a feasible and practical solution
+	from the leaf to the base-root
+	Chris Welman提出的用于解决复杂IK问题的方法
+	CCD是一种反复迭代的启发式方法
+	实际上就是一种数值法
+	Jeff Lander实现CCD的方法是：从运动链的末端开始，逐步改变每个关节的旋转角度
+	从J0到末端效应器E作向量VRE，从J0到目标点D作向量VRD，两向量点积求出两夹角α，叉积可求出其旋转轴Vr
+	https://blog.dreamana.com/2014/01/11/ccd-algorithm-in-as3/#:~:text=CCD%E7%AE%97%E6%B3%95%E6%98%AFCyclic%2DCoordinate,%E5%B0%B1%E6%98%AF%E4%B8%80%E7%A7%8D%E6%95%B0%E5%80%BC%E6%B3%95%E3%80%82
+	则又从末端关节J0开始新一轮运动，直到E和D之间的距离足够小或者到达了给定的循环次数。
+	或者到达了给定的循环次数。
+	当关节链不是很长时，CCD算法容易控制，便于在链中加入新的节点，是简单有效的。
+	Although the basic CCD is designed for serial chains, it can be difficult to modify the solution to work well with multiple conflicting end-effector  goals.
+	a number of  factors that we look at in this article and address with regard to the CCD  approach are as follows:
+	extra effort needs to be incorporated into the logic to determine the path from the root to the end-effector  for articulated configurations with multiple (i.e., tree-like) ends.
+	 we do  not need to update the rest of the hierarchy, which can be highly beneficial  if we have multiple end-effectors, because they will not interact or interfere  with one another (e.g., the left and right arms).
+	CCD only handles serial chains.
+	stack-based buffer overrun.
+	Stack cookie instrumentation code detected a stack-based buffer overrun.
+	clavicle
