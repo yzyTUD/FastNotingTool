@@ -115,3 +115,6 @@
 	 real-time motion capture animation
 	an open architecture of the simulation system  where the inverse kinematics API can be ported to  other distributed VR systems.
 	compatibility of its convergence  speed with the motion tracking
+	Hi, You have to disable Windows Defender before running the KMSPico. This will solve the issue.
+	Thank you for your reply. Before using the kms, should I remove the license key first using /upk in cmd or just simply use the kms right away (before the expiration date)?
+	your virus guard is preventing kmspico to extract.
