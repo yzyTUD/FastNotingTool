@@ -94,3 +94,24 @@
 	an emerging field, many questions remain regarding the design
 	develop use cases based on real-world data analysis tasks.
 	can vary from simple simulation of inter-aural differences to more complex wave-based simulations of the acoustic environment
+	 
+	
+	// IK, for presentation
+	human avatar interaction by using  a set of objective functions to represent the system  constraints 
+	simulating the motion of linked articulated rigid bodies
+	Over the past few years, many  different approaches have been published for constructing the animations or simulating the motion of  a rigid body in virtual environments
+	 is an active research topic in the virtual reality  community
+	map fast motion actions onto avatars in real time
+	placing a larger number of sensors
+	it is costly and inconvenient to use
+	Alternatively we can utilise the natural physical configuration of articulated figures such as joint linkage of body limbs and consider them as constraints
+	One of the common methods is to apply inverse kinematics techniques to solve the joint angles  of the body joints where sensors are not attached
+	n  this way the number of trackers can be reduced and  a range of reasonably accurate postures and gestures  can still be produced
+	inverse kinematics algorithm must  be computationally efficient
+	for  real-time motion generation
+	Over the past few years, many  different approaches have been published
+	we describe an alternative method for  real-time inverse kinematics computations for motion capture animation, which is an iterative algorithm for finding the solutions of the constrained  equations of motion. 
+	reduce computation time by increasing  the time step to solve constrained motions of rigid  bodies with a large number of constraints.
+	 real-time motion capture animation
+	an open architecture of the simulation system  where the inverse kinematics API can be ported to  other distributed VR systems.
+	compatibility of its convergence  speed with the motion tracking
