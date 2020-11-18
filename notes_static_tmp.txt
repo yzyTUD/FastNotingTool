@@ -10,11 +10,7 @@
 	
 		
 	
-	
-	
-		https://www-sop.inria.fr/reves/Basilic/2015/PRDD15b/PCBPT.pdf
-	
-	
+	// icp algo 
 	ICP is however well-known to  suffer from local minima.
 	combines it with a branch-and-bound (BnB)  scheme
 	outlier robustness
@@ -25,17 +21,21 @@
 		relatively few papers have tackled this issue explicitly
 	
 	
-		      individual appointments for evaluation      BigBlueButton online conferencing      screen sharing
+	// cg1 tutor 
+	individual appointments for evaluation      
+	BigBlueButton online conferencing      
+	screen sharing
 	use the scalable cloud services
 	you need a valid ZIH login
 	GoToMeeting and Zoom licenses are issued to personal logins only
 	BigBlueButton can be used by all employees of the TU Dresden without further ado.
 	Each of these tools has similar functionalities. 
-	Go-ICP can be applied in scenarios where an optimal solution is desirable or where a good initialization is not always available.
+	Go-ICP can be applied in scenarios where an optimal solution is 
+		desirable or where a good initialization is not always available.
 	
 	
 	
-	
+	// ccd algo 
 	CCD（Cyclic Coordinate Descent）是最简单和最流行的反向运动学方法之一，已广泛应用于计算机游戏行业
 	主要思想是一次将一个关节与末端效应器和目标对齐
 	CCD倾向于过分强调靠近目标位置的骨骼的旋转（非常长的CCD链只会在其目标周围滚动）
@@ -67,3 +67,30 @@
 	stack-based buffer overrun.
 	Stack cookie instrumentation code detected a stack-based buffer overrun.
 	clavicle
+	multi-joint  chains
+	it can take a series of iterations before converging to a  solution
+	 decides orientation and angle of joint rotation
+	problems associated with improper and large angle  rotations.
+	cyclic coordinate descent(CCD)
+
+
+	// xrlab phd 
+	the creation of experimental and creative immersive experiences
+	creative immersive experiences
+	Definitions of immersive media and related concepts, active and spatial perception, head-tracked displays, 3D tracking
+	 social presence, locomotion and navigation in virtual worlds, measuring immersion, software and application design for real-time VR.
+	numerous technical, design and interaction challenges
+	work closely with experts, practitioners or researchers in different domains
+	develop prototype applications.
+	archaeology, architecture, data visualisation, geospatial science
+	psychotherapy
+	museums and libraries, music and film production, journalism or education and training.
+	https://tu-dresden.de/ing/informatik/smt/im/studium/theses
+	Immersive Experience Lab
+	interdisciplinary research
+	familiarise yourself with relevant technologies. 
+	Immersive data visualisation
+	accelerate discovery, understanding and communication of any meaning or structure within the data.
+	an emerging field, many questions remain regarding the design
+	develop use cases based on real-world data analysis tasks.
+	can vary from simple simulation of inter-aural differences to more complex wave-based simulations of the acoustic environment
