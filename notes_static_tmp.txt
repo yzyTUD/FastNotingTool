@@ -10,16 +10,6 @@
 	
 		
 	
-	// icp algo 
-	ICP is however well-known to  suffer from local minima.
-	combines it with a branch-and-bound (BnB)  scheme
-	outlier robustness
-	The concept of ICP is simple and intuitive. It alternates between estimating geometric transformation (rotation and translation), and estimating the point-wise correspondences
-	widely used in computer vision, and beyond computer vision
-	ICP is however also well-known for its suffering from  the issue of local minima
-	Despite that this  drawback of local-minima is generally well-known, 
-		relatively few papers have tackled this issue explicitly
-	
 	
 	// cg1 tutor 
 	individual appointments for evaluation      
@@ -35,83 +25,16 @@
 	
 	
 	
-	// ccd algo 
-	CCD（Cyclic Coordinate Descent）是最简单和最流行的反向运动学方法之一，已广泛应用于计算机游戏行业
-	主要思想是一次将一个关节与末端效应器和目标对齐
-	CCD倾向于过分强调靠近目标位置的骨骼的旋转（非常长的CCD链只会在其目标周围滚动）
-	很难扩展到多个末端执行器的问题（在这种情况下使用FABRIK）。完全地扩展链条也需要大量的迭代。
-	没有IK算法是完美的
-	The reason CCD is so popular is that it is a computationally fast
-	computationally fast, algorithmically simple, and  straight-forward technique
-	can run at interactive  frame rates.
-	10.1080/2165347X.2013.823362
-	only on a single-linked chained IK problem and disregard multiple connected  hierarchical goals
-	can be fine-tuned to produce more natural lifelike character poses that can be used  to generate realistic motions
-	not requiring any complex matrix math  decomposition
-	A basic rudimentary implementation of CCD often requires numerous additional engineering adjustments to make it a feasible and practical solution
-	from the leaf to the base-root
-	Chris Welman提出的用于解决复杂IK问题的方法
-	CCD是一种反复迭代的启发式方法
-	实际上就是一种数值法
-	Jeff Lander实现CCD的方法是：从运动链的末端开始，逐步改变每个关节的旋转角度
-	从J0到末端效应器E作向量VRE，从J0到目标点D作向量VRD，两向量点积求出两夹角α，叉积可求出其旋转轴Vr
-	https://blog.dreamana.com/2014/01/11/ccd-algorithm-in-as3/#:~:text=CCD%E7%AE%97%E6%B3%95%E6%98%AFCyclic%2DCoordinate,%E5%B0%B1%E6%98%AF%E4%B8%80%E7%A7%8D%E6%95%B0%E5%80%BC%E6%B3%95%E3%80%82
-	则又从末端关节J0开始新一轮运动，直到E和D之间的距离足够小或者到达了给定的循环次数。
-	或者到达了给定的循环次数。
-	当关节链不是很长时，CCD算法容易控制，便于在链中加入新的节点，是简单有效的。
-	Although the basic CCD is designed for serial chains, it can be difficult to modify the solution to work well with multiple conflicting end-effector  goals.
-	a number of  factors that we look at in this article and address with regard to the CCD  approach are as follows:
-	extra effort needs to be incorporated into the logic to determine the path from the root to the end-effector  for articulated configurations with multiple (i.e., tree-like) ends.
-	 we do  not need to update the rest of the hierarchy, which can be highly beneficial  if we have multiple end-effectors, because they will not interact or interfere  with one another (e.g., the left and right arms).
-	CCD only handles serial chains.
-	stack-based buffer overrun.
-	Stack cookie instrumentation code detected a stack-based buffer overrun.
-	clavicle
-	multi-joint  chains
-	it can take a series of iterations before converging to a  solution
-	 decides orientation and angle of joint rotation
-	problems associated with improper and large angle  rotations.
-	cyclic coordinate descent(CCD)
-
-
-	// xrlab phd 
-	the creation of experimental and creative immersive experiences
-	creative immersive experiences
-	Definitions of immersive media and related concepts, active and spatial perception, head-tracked displays, 3D tracking
-	 social presence, locomotion and navigation in virtual worlds, measuring immersion, software and application design for real-time VR.
-	numerous technical, design and interaction challenges
-	work closely with experts, practitioners or researchers in different domains
-	develop prototype applications.
-	archaeology, architecture, data visualisation, geospatial science
-	psychotherapy
-	museums and libraries, music and film production, journalism or education and training.
-	https://tu-dresden.de/ing/informatik/smt/im/studium/theses
-	Immersive Experience Lab
-	interdisciplinary research
-	familiarise yourself with relevant technologies. 
-	Immersive data visualisation
-	accelerate discovery, understanding and communication of any meaning or structure within the data.
-	an emerging field, many questions remain regarding the design
-	develop use cases based on real-world data analysis tasks.
-	can vary from simple simulation of inter-aural differences to more complex wave-based simulations of the acoustic environment
-	 
-	
-	// IK, for presentation
-	human avatar interaction by using  a set of objective functions to represent the system  constraints 
-	simulating the motion of linked articulated rigid bodies
-	Over the past few years, many  different approaches have been published for constructing the animations or simulating the motion of  a rigid body in virtual environments
-	 is an active research topic in the virtual reality  community
-	map fast motion actions onto avatars in real time
-	placing a larger number of sensors
-	it is costly and inconvenient to use
-	Alternatively we can utilise the natural physical configuration of articulated figures such as joint linkage of body limbs and consider them as constraints
-	One of the common methods is to apply inverse kinematics techniques to solve the joint angles  of the body joints where sensors are not attached
-	n  this way the number of trackers can be reduced and  a range of reasonably accurate postures and gestures  can still be produced
-	inverse kinematics algorithm must  be computationally efficient
-	for  real-time motion generation
-	Over the past few years, many  different approaches have been published
-	we describe an alternative method for  real-time inverse kinematics computations for motion capture animation, which is an iterative algorithm for finding the solutions of the constrained  equations of motion. 
-	reduce computation time by increasing  the time step to solve constrained motions of rigid  bodies with a large number of constraints.
-	 real-time motion capture animation
-	an open architecture of the simulation system  where the inverse kinematics API can be ported to  other distributed VR systems.
-	compatibility of its convergence  speed with the motion tracking
+	a number of different tracking approaches available today provide partial solutions, no single approach provides all the features necessary for successful multi-user full-body VR systems
+	we examine the possibilities arising from combining different tracking systems.
+	surrounding fixed sensor arrays.
+	Native Development Kit (NDK)
+	原生开发套件 (NDK) 是一套工具，使您能够在 Android 应用中使用 C 和 C++ 代码，并提供众多平台库
+	进一步提升设备性能，以降低延迟，或运行计算密集型应用，如游戏或物理模拟。
+	您可以在 Android Studio 2.2 或更高版本中使用 NDK 将 C 和 C++ 代码编译到原生库中
+	LLDB：Android Studio 用于调试原生代码的调试程序。
+	Link Gradle to your native library by providing a path to your CMake or ndk-build script file.
+	JNI 是属于 Java 的
+	Native Development Kit，是 Android的一个工具开发包
+	可通过 NDK在 Android中 使用 JNI与本地代码（如C、C++）交互
+	https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS02NjA3ZTkzMjFkM2NiZGRkLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA
