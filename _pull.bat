@@ -1,2 +1,4 @@
+
 git pull origin master
-PAUSE
+
+pause

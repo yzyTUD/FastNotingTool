@@ -1,20 +1,8 @@
 	
-	
-	// cg1 tutor 
-	individual appointments for evaluation      
-	BigBlueButton online conferencing      
-	screen sharing
-	use the scalable cloud services
-	you need a valid ZIH login
-	GoToMeeting and Zoom licenses are issued to personal logins only
-	BigBlueButton can be used by all employees of the TU Dresden without further ado.
-	Each of these tools has similar functionalities. 
-	Go-ICP can be applied in scenarios where an optimal solution is 
-		desirable or where a good initialization is not always available.
-	
-	
-	
-	a number of different tracking approaches available today provide partial solutions, no single approach provides all the features necessary for successful multi-user full-body VR systems
+
+	a number of different tracking approaches available today provide partial solutions, 
+		no single approach provides all the features necessary for successful multi-user 
+		full-body VR systems
 	we examine the possibilities arising from combining different tracking systems.
 	surrounding fixed sensor arrays.
 	Native Development Kit (NDK)
@@ -30,4 +18,94 @@
 	The ultimate goal of virtual reality, however, is to vanquish all such imponderables. 
 	
 	
+	An IcoSphere is used as the second mesh for our implementation of CSG
+	An IcoSphere  was used because it creates an even distribution of vertices on the sphere
+	each of the IcoSphere’s faces are split into four  new faces to achieve a more detailed approximation of a sphere
+	The IcoSphere’s center point is then set at  the current location of the controller
+	. A Sphere is rendered  to visualise the current size of the IcoSphere for the user.
+	The user has the choice of three operations with our implementation of Constructive Solid  Geometry (CSG).
+	These are Union (two meshes are combined), Intersection (the section  which is part of both meshes ) and Difference (The part of mesh 1 that is not included in  mesh 2). 
+	The operation has to be selected from a drop-down menu in the GUI window. 
+	 results in a single mesh that contains the two parts of the input  meshes
+	Finally, the resulting mesh is returned to the VR view, converted into a new Half-Edge Mesh  and displayed
+	surface contouring algorithm.
+	17K points sampled on the statue of an elephant
+	Minolta laser scanner
+	Surface reconstruction from point sets
+	CGAL provides algorithms for all steps listed above except alignment.
+	sampled on the boundary of a 3D solid
+	he marching cubes (MC) algorithm, which generate isosurfaces from a ... optimized for fast execution and low memory consumption
+	A global function poisson_surface_reconstruction_delaunay() is provided. It takes points with normals as input and handles the whole reconstruction pipeline :
+	draw_triangle
+	On the first level individual 3D scans / depth images are stored one per file. Each line specifies on point:  i j x y z nx ny nz r g b  here i and j are indices in the depth images.
 	
+	
+	Numpy is a great framework, but it cannot utilize GPUs to accelerate its numerical computations
+	A PyTorch Tensor is conceptually identical to a numpy array
+	a Tensor is an n-dimensional array
+	Tensors can keep track of a computational graph and gradients, but they抮e also useful as a generic tool for scientific computing.
+	 PyTorch Tensors can utilize GPUs to accelerate their numeric computations. 
+	, you simply need to specify the correct device.
+	import random #????,???state?,??state??????????,???????????,??????????,??: state[0]=3,????????1???4?? def conflict(state, nextX): 	nextY = len(state) 	for i in range(nextY): 		#????????????????????(????,??)????????,??????,?????? 		if abs(state[i]-nextX) in (0, nextY-i): 			return True 	return False  #???????????????????,???????????????? def queens(num, state=()): 	for pos in range(num): 		if not conflict(state, pos): 			#??????????? 			if len(state) == num-1: 				yield (pos, ) 			#??,??????????,????????,????????? 			else: 				for result in queens(num, state+(pos,)): 					yield (pos, ) + result   #????????,?X????????? def prettyprint(solution): 	def line(pos, length=len(solution)): 		return '. ' * (pos) + 'X ' + '. '*(length-pos-1) 	for pos in solution: 		print line(pos)       
+	Like the numpy example above we need to manually implement the forward and backward passes through the network:
+	Princeton ModelNet project
+	we hired human workers on Amazon Mechanical Turk to manually decide whether each CAD model belongs to the specified cateogries
+	Furthermore, we manually aligned the orientation of the CAD models for this 10-class subset as well. We provide both the 10-class subset and the full dataset for download.
+	https://www.youtube.com/watch?v=Ih-wIsU3EVY
+	Virtual Reality (VR) has become a valuable addition to the fields of digital entertainment, 
+		manufacturing, construction and collaborative workspaces
+	Virtual applications share something in common: 
+	For several years, law enforcement and forensic experts have been surveying 
+		crime scenes with 3D laser scanners.
+	The resulting point cloud captures an incredible amount of detail. 
+		But viewing a 3D model on screen doesn抰 really convey what it feels like at the scene
+	Investigators can now 搘alk-though?crime scenes, examine the relationship 
+		between objects and even explore possible lines of sight.
+	https://www.researchgate.net/profile/Soeren_Discher/publication/325619805
+		_A_Point-Based_and_Image-Based_Multi-Pass_Rendering_Technique_for_Visualizing
+		_Massive_3D_Point_Clouds_in_VR_Environments/links/5b191550aca272021ceed577/
+		A-Point-Based-and-Image-Based-Multi-Pass-Rendering-Technique-for-Visualizing-Massive-3D-Point-Clouds-in-VR-Environments.pdf
+
+	
+	curvature 
+	http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/AV0405/MUIR/av-2.html
+	saddle surface
+	https://github.com/alecjacobson/geometry-processing-curvature
+	http://gts.sourceforge.net/darcs/gts-devel/src/curvature.c
+	https://www.ais.uni-bonn.de/papers/IAS_2012_Holz.pdf
+	Iterative Closest Point treats correspondence as a variable to be estimated.
+	CalculateRigidRegistration
+	one has to provide the this pointer of the instance and the method pointer
+	a leading &-symbol followed by the class name,
+	using the signal in exactly the same way as a function with an integer argument:
+	one can detach a callback with cgv::base::disconnect according to
+	all methods of the same instance attached to the signal as callback are detached as well.
+	Callbacks to methods of instances or functors bear the danger that the instance to which the signal was connected is destructed before the signal is emitted. In this case the signal would call a method or the ()-operator with an invalid this pointer.
+	The support for signals with boolean return values is provided by the cgv::base::bool_signal template. 
+	cgv::base::_0, _1, ..., _9 ... to specify the i-th parameter from the signal
+	One final pitfall should be mentioned:
+	when rebinding to a method m() which is implemented in a base class B of the class A, the this pointer of type A has to be cast to the base type B when used in the rebind method, i.e.
+	connect_copy
+	
+	
+	
+	MATLAB: matrix laboratory
+	numeric computing environment
+	plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages.
+	allowing access to symbolic computing abilities.
+	multi-domain simulation and model-based design
+	users come from various backgrounds of engineering, science, and economics.
+	They rewrote MATLAB in C and founded MathWorks in 1984 to continue its development.
+	In 2000, MATLAB was rewritten to use a newer set of libraries for matrix manipulation, LAPACK.[23]
+	in particular the teaching of linear algebra and numeric analysis
+	LAPACK ("Linear Algebra Package") is a standard software library for numerical linear algebra.
+	implement the associated matrix factorizations such as LU, QR, Cholesky and Schur decomposition.
+	Details on this scheme can be found in the Naming scheme section in LAPACK Users' Guide.
+	hese projects provide a similar functionality to LAPACK, but the main interface differs from that of LAPACK:
+	Template metaprogramming
+	templates are used by a compiler to generate temporary source code, which is merged by the compiler with the rest of the source code and then compiled
+	it builds expression trees at compile time and generates custom code to evaluate these.
+	Eigen itself can provide BLAS and a subset of LAPACK interfaces.[3]
+
+	
+	the main concepts of Gears-Vk is composition
